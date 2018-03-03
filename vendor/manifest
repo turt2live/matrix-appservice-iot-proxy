@@ -1,0 +1,73 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/codegangsta/negroni",
+			"repository": "https://github.com/codegangsta/negroni",
+			"revision": "22c5532ea862c34fdad414e90f8cc00b4f6f4cab",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/gorilla/mux",
+			"repository": "https://github.com/gorilla/mux",
+			"revision": "07ba1fd60e210dc5cc6f86ec25dc9ecc7c95c295",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/lestrrat/go-file-rotatelogs",
+			"repository": "https://github.com/lestrrat/go-file-rotatelogs",
+			"revision": "9df8b44f21785240553882138c5df2e9cc1db910",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/lestrrat/go-strftime",
+			"repository": "https://github.com/lestrrat/go-strftime",
+			"revision": "ba3bf9c1d0421aa146564a632931730344f1f9f1",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/pkg/errors",
+			"repository": "https://github.com/pkg/errors",
+			"revision": "30136e27e2ac8d167177e8a583aa4c3fea5be833",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/rifflock/lfshook",
+			"repository": "https://github.com/rifflock/lfshook",
+			"revision": "bf539943797a1f34c1f502d07de419b5238ae6c6",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/sebest/xff",
+			"repository": "https://github.com/sebest/xff",
+			"revision": "6c115e0ffa35d6a2e3f7a9e797c9cf07f0da4b9f",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/sirupsen/logrus",
+			"repository": "https://github.com/sirupsen/logrus",
+			"revision": "f4ee69125072b22721efbe639bd0da9c9d19b8cc",
+			"branch": "master"
+		},
+		{
+			"importpath": "golang.org/x/crypto/ssh/terminal",
+			"repository": "https://go.googlesource.com/crypto",
+			"revision": "91a49db82a88618983a78a06c1cbd4e00ab749ab",
+			"branch": "master",
+			"path": "/ssh/terminal"
+		},
+		{
+			"importpath": "golang.org/x/sys/windows",
+			"repository": "https://go.googlesource.com/sys",
+			"revision": "dd2ff4accc098aceecb86b36eaa7829b2a17b1c9",
+			"branch": "master",
+			"path": "/windows"
+		},
+		{
+			"importpath": "gopkg.in/yaml.v2",
+			"repository": "https://gopkg.in/yaml.v2",
+			"revision": "7f97868eec74b32b0982dd158a51a446d1da7eb5",
+			"branch": "master"
+		}
+	]
+}

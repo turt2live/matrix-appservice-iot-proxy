@@ -1,0 +1,18 @@
+# IoT Proxy Configuration
+
+# The URL to the real homeserver
+homeserverUrl: http://localhost:8008
+
+# The appservice tokens to do processing for. If this is empty, all AppService tokens will
+# be handled. Any tokens that should not be processed will be sent straight through to the
+# homeserver for processing.
+allowedTokens: []
+
+# The directory to use for storing logs. Relative to where the binary is run.
+logDirectory: logs
+
+# The address to bind the webserver to
+bindAddress: 0.0.0.0
+
+# The port to have the webserver listen on
+bindPort: 4232
