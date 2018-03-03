@@ -57,6 +57,13 @@
 			"path": "/ssh/terminal"
 		},
 		{
+			"importpath": "golang.org/x/sys/unix",
+			"repository": "https://go.googlesource.com/sys",
+			"revision": "dd2ff4accc098aceecb86b36eaa7829b2a17b1c9",
+			"branch": "master",
+			"path": "/unix"
+		},
+		{
 			"importpath": "golang.org/x/sys/windows",
 			"repository": "https://go.googlesource.com/sys",
 			"revision": "dd2ff4accc098aceecb86b36eaa7829b2a17b1c9",
