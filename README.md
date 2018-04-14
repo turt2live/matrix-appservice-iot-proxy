@@ -18,7 +18,7 @@ cd matrix-appservice-iot-proxy
 currentDir=$(pwd)
 export GOPATH="$currentDir/vendor/src:$currentDir/vendor:$currentDir:"$GOPATH
 go get github.com/constabulary/gb/...
-export PATH=$PATH":$currentDir/vendor/bin"
+export PATH=$PATH":$currentDir/vendor/bin:$currentDir/vendor/src/bin"
 
 # Build it
 gb vendor restore
