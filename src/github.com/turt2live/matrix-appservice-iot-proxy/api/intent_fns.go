@@ -26,7 +26,9 @@ func postIntent(path string, body interface{}, asToken string, userId string, lo
 	req.Header.Set("Authorization", "Bearer "+asToken)
 	req.URL.RawQuery = "user_id=" + userId
 	res, err := (&http.Client{}).Do(req)
-	defer res.Body.Close()
+	if res != nil {
+		defer res.Body.Close()
+	}
 
 	// We don't actually care for the result too much
 	if err != nil {
