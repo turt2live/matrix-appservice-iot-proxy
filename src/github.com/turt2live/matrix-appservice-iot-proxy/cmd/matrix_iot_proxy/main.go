@@ -55,7 +55,7 @@ func main() {
 	catchAll := Handler{api.MatrixProxyHandler, hOpts}
 	sendToRoom := Handler{api.SendToRoomHandler, hOpts}
 
-	rtr.PathPrefix("/_matrix/client/{csVersion:.*}/rooms/{roomId:[a-zA-Z0-9:!.\\-_]+}/").Handler(sendToRoom)
+	rtr.PathPrefix("/_matrix/client/{csVersion:.*}/rooms/{roomId:[a-zA-Z0-9:!.\\-_]+}").Handler(sendToRoom)
 	rtr.PathPrefix("/_matrix").Handler(catchAll)
 
 	address := config.Get().BindAddress + ":" + strconv.Itoa(config.Get().BindPort)

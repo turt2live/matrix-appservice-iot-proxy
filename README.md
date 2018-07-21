@@ -36,7 +36,9 @@ bin/matrix_iot_proxy
 This project allows IoT devices to simplify their code, making sure that virtual users exist and have joined the room. For instance, consider a simple sensor (that happens to be powered by cURL) data logging device:
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" --data-binary '{"temperature":22,"units":"Celsius"}' 'http://my.iot.proxy.com:4232/_matrix/client/r0/rooms/!myroom:domain.com/send/com.custom.temperature/myTransactionIdHere?access_token=YourAppserviceToken&user_id=@.sensor.temperature:domain.com'
+curl -X PUT -H "Content-Type: application/json" --data-binary '{"temperature":22,"units":"Celsius"}' 'http://my.iot.proxy.com:4232/_matrix/client/r0/rooms/!myroom:domain.com/send/com.custom.temperature/_txn_?access_token=YourAppserviceToken&user_id=@.sensor.temperature:domain.com'
 ```
 
 Note how the IoT device does not need to register `@.sensor.temperature:domain.com` and it does not need to join `!myroom:domain.com` - both are handled automatically by this proxy. Please note that your IoT devices will need to have the appservice token, and therefore you'll need to register the appservice yourself.
+
+The IoT Proxy will additionally replace `_txn_` with a unique value when sending events so your devices do not need to track state. If you don't want to use this functionality, simply don't use the `_txn_` keyword in your request.
