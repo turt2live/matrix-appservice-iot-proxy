@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"github.com/turt2live/matrix-appservice-iot-proxy/config"
 	"fmt"
+	"io/ioutil"
 )
 
 type registerRequest struct {
@@ -23,8 +24,8 @@ func postIntent(path string, body interface{}, asToken string, userId string, lo
 
 	req, _ := http.NewRequest("POST", config.Get().HomeserverUrl+path, bodyStream)
 	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("Authorization", "Bearer "+asToken)
-	req.URL.RawQuery = "user_id=" + userId
+	//req.Header.Set("Authorization", "Bearer "+asToken)
+	req.URL.RawQuery = "user_id=" + userId + "&access_token=" + asToken
 	res, err := (&http.Client{}).Do(req)
 	if res != nil {
 		defer res.Body.Close()
@@ -35,8 +36,8 @@ func postIntent(path string, body interface{}, asToken string, userId string, lo
 		log.Error(fmt.Sprintf("Could not register user: %v", err))
 	} else {
 		log.Info(fmt.Sprintf("Received status code %d", res.StatusCode))
-		//b, _ := ioutil.ReadAll(res.Body)
-		//log.Info(string(b))
+		b, _ := ioutil.ReadAll(res.Body)
+		log.Info(string(b))
 	}
 }
 
